@@ -51,7 +51,17 @@ class _splashState extends State<splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Loading...")),
-    );
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          color: Color(0xD660AE98),
+          child: Center(
+            child: CircularProgressIndicator(
+              backgroundColor: Color(0xFFFFFFFF),
+              valueColor: AlwaysStoppedAnimation(Color(0xFF060505)),
+              strokeWidth: 5,
+            ),
+          ),
+        ));
   }
 }
